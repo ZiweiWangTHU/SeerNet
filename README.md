@@ -1,7 +1,7 @@
 
 # SeerNet
 
-​	This is the pytorch implementation for the paper: *Learning Accurate Performance Predictors for Ultrafast Automated Model Compression*, which is in submission to TPAMI. This repo contains active sampling for training the performance predictor, optimizing the compression policy and finetuning on two datasets(VGG-small, ResNet20 on Cifar-10; ResNet18, MobileNetv2, ResNet50 on ImageNet) using our proposed SeerNet.
+​	This is the pytorch implementation for the paper: *Learning Accurate Performance Predictors for Ultrafast Automated Model Compression*, which is in submission to IJCV. This repo contains active sampling for training the performance predictor, optimizing the compression policy and finetuning on two datasets(VGG-small, ResNet20 on Cifar-10; ResNet18, MobileNetv2, ResNet50 on ImageNet) using our proposed SeerNet.
 
 ​	As for the entire pipeline, we firstly get a few random samples to pretrain the MLP predictor. After getting the pretrained predictor, we execute active sampling using evolution search to get samples, which are used to further optimize the predictor above. Then we search for optimal compression policy under given constraint utilizing the predictor. Finally, we finetune the policy until convergence.
 
